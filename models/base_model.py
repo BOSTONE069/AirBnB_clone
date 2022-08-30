@@ -1,20 +1,23 @@
 #!/usr/bin/python3
 """Defines the BaseModel class"""
-import models
+# import models
 from uuid import uuid4
 from datetime import datetime
+
+import models
 
 
 class BaseModel:
     """This is the class that represents the BaseModel"""
+
     def __init__(self, *arg, **kwargs):
         """
         It creates a new instance of the class.
         """
         tformat = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
-        self.created_at = datetime.today()
-        self.updated_at = datetime.today()
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
         if len(kwargs) != 0:
             for j, k in kwargs.items():
                 if j == "created_at" or j == "updated_at":
@@ -22,7 +25,8 @@ class BaseModel:
                 else:
                     self.__dict__[j] = k
         else:
-            models.storage.new(self)
+            pass
+            # models.storage.new(self)
 
     def save(self):
         """
@@ -30,8 +34,8 @@ class BaseModel:
         instance with the current datetime and saves the instance
         to the JSON file
         """
-        self.updated_at = datetime.today()
-        models.storage.save()
+        self.updated_at = datetime.now()
+        # models.storage.save()
 
     def to_dict(self):
         """
@@ -53,4 +57,4 @@ class BaseModel:
         :return: The class name, the id of the object, and the dictionary of the object.
         """
         clname = self.__class__.__name__
-        return "{} {} {}".format(clname, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(clname, self.id, self.__dict__)
