@@ -11,14 +11,14 @@ class BaseModel:
         """
         It creates a new instance of the class.
         """
-        timeformat = "%Y-%m-%dT%H:%M:%S.%f"
+        tformat = "%Y-%m-%dT%H:%M:%S.%f"
         self.id = str(uuid4())
         self.created_at = datetime.today()
         self.updated_at = datetime.today()
         if len(kwargs) != 0:
             for j, k in kwargs.items():
                 if j == "created_at" or j == "updated_at":
-                    self.__dict__[j] = datetime.strptime(timeformat)
+                    self.__dict__[j] = datetime.strptime(k, tformat)
                 else:
                     self.__dict__[j] = k
         else:
