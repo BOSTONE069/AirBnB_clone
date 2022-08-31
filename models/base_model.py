@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """Defines the BaseModel class"""
-# import models
+import models
 from uuid import uuid4
 from datetime import datetime
-
-import models
 
 
 class BaseModel:
@@ -25,8 +23,7 @@ class BaseModel:
                 else:
                     self.__dict__[j] = k
         else:
-            pass
-            # models.storage.new(self)
+            models.storage.new(self)
 
     def save(self):
         """
@@ -35,7 +32,7 @@ class BaseModel:
         to the JSON file
         """
         self.updated_at = datetime.now()
-        # models.storage.save()
+        models.storage.save()
 
     def to_dict(self):
         """
