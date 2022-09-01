@@ -7,13 +7,14 @@ from shlex import split
 
 from models.base_model import BaseModel
 from models import storage
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
     file = None
 
-    __classes = {'BaseModel':BaseModel}
+    __classes = {'BaseModel':BaseModel, 'User': User}
 
     def do_quit(self, arg):
         'Quit command to exit program'
