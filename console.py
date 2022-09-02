@@ -128,7 +128,7 @@ class HBNBCommand(cmd.Cmd):
         into the JSON file)
         """
         arglength = parse(arg)
-        objdict = storage, all()
+        objdict = storage.all()
 
         if len(arglength) == 0:
             print("** class name missing **")
