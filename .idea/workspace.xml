@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05e887bb-f5ec-4f9e-88a1-ec4430bf051b" name="Changes" comment="Creation of the different commands for the console">
-      <change beforePath="$PROJECT_DIR$/console.py" beforeDir="false" afterPath="$PROJECT_DIR$/console.py" afterDir="false" />
-    </list>
+    <list default="true" id="05e887bb-f5ec-4f9e-88a1-ec4430bf051b" name="Changes" comment="This the updated console file and the JSON file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +146,35 @@
       <option name="project" value="LOCAL" />
       <updated>1662037636796</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="This is the logo for Holberton School">
+      <created>1662046443526</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1662046443526</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Read here first">
+      <created>1662046674985</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1662046674985</updated>
+    </task>
+    <task id="LOCAL-00019" summary="This the updated console file and the JSON file">
+      <created>1662054763250</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1662054763251</updated>
+    </task>
+    <task id="LOCAL-00020" summary="This the updated console file and the JSON file">
+      <created>1662054803698</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1662054803698</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,7 +191,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="This is file that has tha names of the authors of the prject" />
     <MESSAGE value="This is file that has tha names of the authors of the project" />
-    <MESSAGE value="Read here first" />
     <MESSAGE value="Added new email address" />
     <MESSAGE value="test model file" />
     <MESSAGE value="This is the base model class file" />
@@ -175,6 +200,9 @@
     <MESSAGE value="File storage engine files" />
     <MESSAGE value="Console commands" />
     <MESSAGE value="Creation of the different commands for the console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation of the different commands for the console" />
+    <MESSAGE value="This is the logo for Holberton School" />
+    <MESSAGE value="Read here first" />
+    <MESSAGE value="This the updated console file and the JSON file" />
+    <option name="LAST_COMMIT_MESSAGE" value="This the updated console file and the JSON file" />
   </component>
 </project>
