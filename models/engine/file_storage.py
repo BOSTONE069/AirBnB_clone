@@ -31,9 +31,12 @@ class FileStorage:
         from models.state import State
         from models.city import City
         from models.amenity import Amenity
+        from models.review import Review
+        from models.place import Place
         classes = {
                 'BaseModel': BaseModel, 'User': User,
-                'State': State, 'City': City, 'Amenity': Amenity
+                'State': State, 'City': City, 'Amenity': Amenity,
+                'Review': Review, 'Place': Place
                 }
         try:
             temp = {}
