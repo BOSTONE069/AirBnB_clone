@@ -8,6 +8,9 @@ from shlex import split
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
 
 
 def parse(arg):
@@ -31,8 +34,11 @@ def parse(arg):
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
 
-    className = {'BaseModel': BaseModel,
-                 'User': User}
+    className = {
+            'BaseModel': BaseModel,
+            'User': User, 'State': State,
+            'City': City, 'Amenity': Amenity
+            }
 
     def do_quit(self, arg):
         """Quit command to exit program"""
