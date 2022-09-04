@@ -4,7 +4,6 @@ import cmd
 import re
 import sys
 from shlex import split
-
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
@@ -42,6 +41,39 @@ class HBNBCommand(cmd.Cmd):
             'City': City, 'Amenity': Amenity,
             'Place': Place, 'Review': Review
             }
+    
+    def emptyline(self):
+        """Do nothing when receiving empty line"""
+        pass
+    
+    def default(self, arg):
+        """
+        It takes a string,
+        and if it matches a certain pattern, 
+        it calls a function with the string
+        as an argument
+        
+        :param arg: the argument passed to the command
+        :return: the result of the function call.
+        """
+        argdict = {
+            "all": self.do_all,
+            "show": self.do_show,
+            "destroy": self.do_destroy,
+            "count": self.do_count,
+            "update": self.do_update
+        }
+        matching = re.search(r"\.", arg)
+        if matching is not None:
+            arg1 = [arg[:matching.span()[0]], arg[matching.span()[0]]]
+            matching = re.search(r"\((.*?)\)", argl[1])
+            if matching is not None:
+                command = [arg1[:matching.span()[0]], matching.group()[1:-1]]
+                if command[0] in argdict.keys():
+                    call = "{} {}".format(arg1[0], command[1])
+                    return argdict[command[0]](call)
+        print("Unknown syntax: {}".format(arg))
+        return False
 
     def do_quit(self, arg):
         """Quit command to exit program"""
