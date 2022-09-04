@@ -103,7 +103,8 @@ class HBNBCommand(cmd.Cmd):
     def do_show(self, arg):
         """
         Usage: show <class> <id> or <class>.show(<id>)
-        Display the string representation of a class instance of a given id.
+        Display the string representation of 
+        a class instance of a given id.
         """
         arglength = parse(arg)
         objdict = storage.all()
@@ -137,8 +138,8 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, arg):
         """
-        It prints all the string representation of all the objects in the storage.
-
+        It prints all the string representation o
+        f all the objects in the storage.
         :param arg: the string that the user inputs
         """
         arglength = parse(arg)
@@ -156,7 +157,6 @@ class HBNBCommand(cmd.Cmd):
     def do_count(self, arg):
         """
         Counts the number of objects of a given class
-        
         :param arg: the string that the user entered after the command
         """
         arg1 = parse(arg)
@@ -169,7 +169,8 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """
         This function updates an
-        instance based on the class name and id by adding or updating attribute (save the change
+        instance based on the class name and 
+        id by adding or updating attribute (save the change
         into the JSON file)
         """
         arglength = parse(arg)
