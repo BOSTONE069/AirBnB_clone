@@ -1,0 +1,39 @@
+Index: console.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#!/usr/bin/python3\n\nimport cmd\nimport re\nimport sys\nfrom shlex import split\n\nfrom models.base_model import BaseModel\nfrom models import storage\n\n\nclass HBNBCommand(cmd.Cmd):\n    prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''\n    file = None\n\n    __classes = {'BaseModel':BaseModel}\n\n    def do_quit(self, arg):\n        'Quit command to exit program'\n        self.close()\n        quit()\n        return True\n\n    def do_EOF(self, arg):\n        \"\"\" Handles EOF to exit program \"\"\"\n        print()\n        exit()\n\n    def help_EOF(self):\n        \"\"\" Prints the help documentation for EOF \"\"\"\n        print(\"Exits the program without formatting\\n\")\n\n    def precmd(self, line):\n        line = line.lower()\n        if self.file and 'playback' not in line:\n            print(line, file=self.file)\n        return line\n\n    def close(self):\n        if self.file:\n            self.file.close()\n            self.file = None\n\n    def do_create(self, arg):\n        \"\"\"Used in creation of class instance \"\"\"\n\n        arglength = parse(arg)\n        if len(arglength) == 0:\n            print(\"** class name missing **\")\n        elif arglength[0] not in HBNBCommand.__classes:\n            print(\"** class doesn't exist **\")\n        else:\n            print(eval(arglength[0])().id)\n            storage.save()\n\n    def do_show(self, arg):\n        \"\"\"\n        Usage: show <class> <id> or <class>.show(<id>)\n        Display the string representation of a class instance of a given id.\n        \"\"\"\n        arglength = parse(arg)\n        objdict = storage.all()\n        if len(arglength) == 0:\n            print(\"** class name missing **\")\n        elif arglength[0] not in HBNBCommand.__classes:\n            print(\"** class doesn't exist **\")\n        elif len(arglength) == 1:\n            print(\"** instance id missing **\")\n        elif \"{}.{}\".format(arglength[0], arglength[1]) not in objdict:\n            print(\"** no instance found **\")\n        else:\n            print(objdict[\"{}.{}\".format(arglength[0], arglength[1])])\n\n    def do_destroy(self, arg):\n        \"\"\"Usage: destroy <class> <id> or <class>.destroy(<id>)\n        Delete a class instance of a given id.\"\"\"\n        arglength = parse(arg)\n        objdict = storage.all()\n        if len(arglength) == 0:\n            print(\"** class name missing **\")\n        elif arglength[0] not in HBNBCommand.__classes:\n            print(\"** class doesn't exist **\")\n        elif len(arglength) == 1:\n            print(\"** instance id missing **\")\n        elif \"{}.{}\".format(arglength[0], arglength[1]) not in objdict.keys():\n            print(\"** no instance found **\")\n        else:\n            del objdict[\"{}.{}\".format(arglength[0], arglength[1])]\n            storage.save()\n\n    def do_all(self, arg):\n        \"\"\"\n        It prints all the string representation of all the objects in the storage.\n\n        :param arg: the string that the user inputs\n        \"\"\"\n        arglength = parse(arg)\n        if len(arglength) > 0 and arglength[0] not in HBNBCommand.__classes:\n            print(\"** class doesn't exist **\")\n        else:\n            objlength = []\n            for obj in storage.all().values():\n                if len(arglength) > 0 and arglength[0] == obj.__class__.__name__:\n                    objlength.append(obj.__str__())\n                elif len(arglength) == 0:\n                    objlength.append(obj.__str__())\n            print(objlength)\n\n\ndef parse(arg):\n    curly_braces = re.search(r\"\\{(.*?)\\}\", arg)\n    brackets = re.search(r\"\\[(.*?)\\]\", arg)\n    if curly_braces is None:\n        if brackets is None:\n            return [i.strip(\",\") for i in split(arg)]\n        else:\n            lexer = split(arg[:brackets.span()[0]])\n            retl = [i.strip(\",\") for i in lexer]\n            retl.append(brackets.group())\n            return retl\n    else:\n        lexer = split(arg[:curly_braces.span()[0]])\n        retl = [i.strip(\",\") for i in lexer]\n        retl.append(curly_braces.group())\n        return retl\n\n\nif __name__ == '__main__':\n    HBNBCommand().cmdloop()\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/console.py b/console.py
+--- a/console.py	(revision dfb1618b665daf2dd1e6fbecedd4d4e1a041dbc5)
++++ b/console.py	(date 1662045723040)
+@@ -13,10 +13,10 @@
+     prompt = '(hbnb) ' if sys.__stdin__.isatty() else ''
+     file = None
+ 
+-    __classes = {'BaseModel':BaseModel}
++    __classes = {'BaseModel': BaseModel}
+ 
+     def do_quit(self, arg):
+-        'Quit command to exit program'
++        """Quit command to exit program"""
+         self.close()
+         quit()
+         return True
+@@ -108,6 +108,15 @@
+ 
+ 
+ def parse(arg):
++    """
++    It splits the argument string into a list of strings,
++    and then appends the curly braces or brackets to the end of the
++    list
++
++    :param arg: The argument to be parsed
++    :return: A list of strings.
++    """
++    # Searching for a curly brace in the argument.
+     curly_braces = re.search(r"\{(.*?)\}", arg)
+     brackets = re.search(r"\[(.*?)\]", arg)
+     if curly_braces is None:
