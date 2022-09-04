@@ -52,9 +52,6 @@ class HBNBCommand(cmd.Cmd):
         and if it matches a certain pattern, 
         it calls a function with the string
         as an argument
-        
-        :param arg: the argument passed to the command
-        :return: the result of the function call.
         """
         argdict = {
             'all': self.do_all,
