@@ -57,18 +57,18 @@ class HBNBCommand(cmd.Cmd):
         :return: the result of the function call.
         """
         argdict = {
-            "all": self.do_all,
-            "show": self.do_show,
-            "destroy": self.do_destroy,
-            "count": self.do_count,
-            "update": self.do_update
+            'all': self.do_all,
+            'show': self.do_show,
+            'destroy': self.do_destroy,
+            'count': self.do_count,
+            'update': self.do_update
         }
         matching = re.search(r"\.", arg)
         if matching is not None:
-            arg1 = [arg[:matching.span()[0]], arg[matching.span()[0]]]
-            matching = re.search(r"\((.*?)\)", argl[1])
+            arg1 = [arg[:matching.span()[0]], arg[matching.span()[1]:]]
+            matching = re.search(r"\((.*?)\)", arg1[1])
             if matching is not None:
-                command = [arg1[:matching.span()[0]], matching.group()[1:-1]]
+                command = [arg1[1][:matching.span()[0]], matching.group()[1:-1]]
                 if command[0] in argdict.keys():
                     call = "{} {}".format(arg1[0], command[1])
                     return argdict[command[0]](call)
@@ -152,6 +152,19 @@ class HBNBCommand(cmd.Cmd):
                 elif len(arglength) == 0:
                     objlength.append(obj.__str__())
             print(objlength)
+            
+    def do_count(self, arg):
+        """
+        Counts the number of objects of a given class
+        
+        :param arg: the string that the user entered after the command
+        """
+        arg1 = parse(arg)
+        count = 0
+        for object in storage.all().values():
+            if arg1[0] == object.__class__.__name__:
+                count += 1
+        print(count)
 
     def do_update(self, arg):
         """
