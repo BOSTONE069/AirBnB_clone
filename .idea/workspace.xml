@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="05e887bb-f5ec-4f9e-88a1-ec4430bf051b" name="Changes" comment="Made changes to these files" />
+    <list default="true" id="05e887bb-f5ec-4f9e-88a1-ec4430bf051b" name="Changes" comment="Updated console file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +25,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/intelligence/Desktop/Pythonprogramming&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/intelligence/AirBnB_clone&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -231,7 +234,119 @@
       <option name="project" value="LOCAL" />
       <updated>1662285745847</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="These are test for the base model file">
+      <created>1662287118695</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287118695</updated>
+    </task>
+    <task id="LOCAL-00030" summary="This is a test for the base model">
+      <created>1662287465528</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287465528</updated>
+    </task>
+    <task id="LOCAL-00031" summary="This is a test for the city">
+      <created>1662287486403</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287486403</updated>
+    </task>
+    <task id="LOCAL-00032" summary="This is a test file for the console">
+      <created>1662287512966</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287512966</updated>
+    </task>
+    <task id="LOCAL-00033" summary="This is a test file for the console">
+      <created>1662287523167</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287523167</updated>
+    </task>
+    <task id="LOCAL-00034" summary="This is a test file for the review">
+      <created>1662287540240</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287540240</updated>
+    </task>
+    <task id="LOCAL-00035" summary="This is a test file for the state">
+      <created>1662287561753</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287561753</updated>
+    </task>
+    <task id="LOCAL-00036" summary="This is a test file for the user">
+      <created>1662287577163</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287577163</updated>
+    </task>
+    <task id="LOCAL-00037" summary="This is the initialization file">
+      <created>1662287627675</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287627675</updated>
+    </task>
+    <task id="LOCAL-00038" summary="This is the initialization file">
+      <created>1662287637387</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1662287637387</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Updated some lines in the console file">
+      <created>1662289388529</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1662289388529</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Updated the console and the Json file">
+      <created>1662290718835</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1662290718835</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Updated the read me file">
+      <created>1662291484724</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1662291484725</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Updated console file">
+      <created>1662292102858</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1662292102858</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Updated console file">
+      <created>1662292321087</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1662292321087</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Updated console file">
+      <created>1662327886560</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1662327886560</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,12 +361,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="This is file that has tha names of the authors of the prject" />
-    <MESSAGE value="This is file that has tha names of the authors of the project" />
-    <MESSAGE value="Added new email address" />
-    <MESSAGE value="test model file" />
-    <MESSAGE value="This is the base model class file" />
-    <MESSAGE value="Init file for the test folder" />
     <MESSAGE value="Init file for the test file for the dictionary" />
     <MESSAGE value="Update the base filesystem" />
     <MESSAGE value="File storage engine files" />
@@ -265,6 +374,18 @@
     <MESSAGE value="Test console file" />
     <MESSAGE value="These are test files" />
     <MESSAGE value="Made changes to these files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made changes to these files" />
+    <MESSAGE value="These are test for the base model file" />
+    <MESSAGE value="This is a test for the base model" />
+    <MESSAGE value="This is a test for the city" />
+    <MESSAGE value="This is a test file for the console" />
+    <MESSAGE value="This is a test file for the review" />
+    <MESSAGE value="This is a test file for the state" />
+    <MESSAGE value="This is a test file for the user" />
+    <MESSAGE value="This is the initialization file" />
+    <MESSAGE value="Updated some lines in the console file" />
+    <MESSAGE value="Updated the console and the Json file" />
+    <MESSAGE value="Updated the read me file" />
+    <MESSAGE value="Updated console file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated console file" />
   </component>
 </project>

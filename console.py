@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Defines the HBnB console."""
 import cmd
 import re
 import sys
@@ -15,6 +15,13 @@ from models.amenity import Amenity
 
 
 def parse(arg):
+    """
+    It splits the argument string into a list of strings, 
+    and then appends the curly braces or brackets to the end of the
+    list
+    :param arg: The argument to be parsed
+    :return: A list of strings.
+    """
     curly_braces = re.search(r"\{(.*?)\}", arg)
     brackets = re.search(r"\[(.*?)\]", arg)
     if curly_braces is None:
@@ -33,6 +40,11 @@ def parse(arg):
 
 
 class HBNBCommand(cmd.Cmd):
+    """Defines the HolbertonBnB command interpreter.
+
+        Attributes:
+            prompt (str): The command prompt.
+    """
     prompt = '(hbnb) '
 
     className = {
