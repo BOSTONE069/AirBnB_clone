@@ -41,15 +41,15 @@ class HBNBCommand(cmd.Cmd):
             'City': City, 'Amenity': Amenity,
             'Place': Place, 'Review': Review
             }
-    
+
     def emptyline(self):
         """Do nothing when receiving empty line"""
         pass
-    
+
     def default(self, arg):
         """
         It takes a string,
-        and if it matches a certain pattern, 
+        and if it matches a certain pattern,
         it calls a function with the string
         as an argument
         """
@@ -100,7 +100,7 @@ class HBNBCommand(cmd.Cmd):
     def do_show(self, arg):
         """
         Usage: show <class> <id> or <class>.show(<id>)
-        Display the string representation of 
+        Display the string representation of
         a class instance of a given id.
         """
         arglength = parse(arg)
@@ -150,7 +150,7 @@ class HBNBCommand(cmd.Cmd):
                 elif len(arglength) == 0:
                     objlength.append(obj.__str__())
             print(objlength)
-            
+
     def do_count(self, arg):
         """
         Counts the number of objects of a given class
@@ -166,7 +166,7 @@ class HBNBCommand(cmd.Cmd):
     def do_update(self, arg):
         """
         This function updates an
-        instance based on the class name and 
+        instance based on the class name and
         id by adding or updating attribute (save the change
         into the JSON file)
         """
