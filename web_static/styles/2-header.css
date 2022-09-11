@@ -1,0 +1,10 @@
+/*
+* == Header Style ==
+*/
+
+/* Setting the background color of the header to red, the height to 70px, and the width to 100%. */
+header {
+            background-color: #FF0000;
+            height: 70px;
+            width: 100%;
+        }
