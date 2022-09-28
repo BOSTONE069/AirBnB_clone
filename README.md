@@ -283,6 +283,10 @@ Alternatively, you can specify a single test file to run at a time:
 $ python3 -m unittest tests/test_console.py
 ```
 
+This was a colaborative work of the following authors;
+
 ## Authors :black_nib:
 * **Jonathan Achola** <[jon-09](https://github.com/jon-09)>
 * **Ochieng Bostone** <[BOSTONE069](https://github.com/BOSTONE069)>
+
+
